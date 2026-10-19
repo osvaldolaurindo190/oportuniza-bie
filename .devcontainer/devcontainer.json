@@ -1,0 +1,14 @@
+{
+  "name": "Oportuniza Bie - PHP e MySQL",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/var/www/html",
+  "forwardPorts": [80],
+  "portsAttributes": {
+    "80": {
+      "label": "Oportuniza Bie",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "php -v && php -m | grep -E 'PDO|pdo_mysql'"
+}
